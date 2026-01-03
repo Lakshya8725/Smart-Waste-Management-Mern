@@ -1,0 +1,78 @@
+smart-waste-mern/
+├── backend/                    # Node.js + Express API
+│   ├── config/
+│   │   ├── db.js              # MongoDB connection
+│   │   ├── cloudinary.js      # Image upload config
+│   │   └── jwt.js             # JWT configuration
+│   ├── models/
+│   │   ├── User.js            # User schema
+│   │   ├── Report.js          # Waste report schema
+│   │   └── Collection.js      # Collection verification schema
+│   ├── routes/
+│   │   ├── auth.js            # Authentication routes
+│   │   ├── reports.js         # Report management
+│   │   ├── collections.js     # Collection verification
+│   │   ├── ai.js              # AI assistant routes
+│   │   └── admin.js           # Admin dashboard
+│   ├── middleware/
+│   │   ├── auth.js            # JWT verification
+│   │   ├── upload.js          # Multer config
+│   │   └── validation.js      # Request validation
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── reportController.js
+│   │   ├── collectionController.js
+│   │   ├── aiController.js
+│   │   └── adminController.js
+│   ├── utils/
+│   │   ├── imageComparison.js # Image similarity
+│   │   ├── geoUtils.js        # Distance calculation
+│   │   ├── pointsCalculator.js
+│   │   └── emailService.js
+│   ├── .env
+│   ├── server.js
+│   └── package.json
+│
+├── frontend/                   # React Application
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── auth/
+│   │   │   │   ├── Login.jsx
+│   │   │   │   ├── Register.jsx
+│   │   │   │   └── ProtectedRoute.jsx
+│   │   │   ├── user/
+│   │   │   │   ├── ReportWaste.jsx
+│   │   │   │   ├── MyReports.jsx
+│   │   │   │   ├── AIAssistant.jsx
+│   │   │   │   ├── Leaderboard.jsx
+│   │   │   │   └── Dashboard.jsx
+│   │   │   ├── admin/
+│   │   │   │   ├── AdminDashboard.jsx
+│   │   │   │   ├── ReportsList.jsx
+│   │   │   │   ├── ReportsMap.jsx
+│   │   │   │   ├── Analytics.jsx
+│   │   │   │   └── CollectionVerify.jsx
+│   │   │   ├── common/
+│   │   │   │   ├── Navbar.jsx
+│   │   │   │   ├── MapPicker.jsx
+│   │   │   │   ├── ImageUpload.jsx
+│   │   │   │   └── Loader.jsx
+│   │   │   └── layout/
+│   │   │       └── Layout.jsx
+│   │   ├── context/
+│   │   │   ├── AuthContext.jsx
+│   │   │   └── ThemeContext.jsx
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   ├── authService.js
+│   │   │   └── mapService.js
+│   │   ├── utils/
+│   │   │   ├── constants.js
+│   │   │   └── helpers.js
+│   │   ├── styles/
+│   │   │   └── theme.js (Material-UI theme)
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
+│
+└── README.md
